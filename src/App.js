@@ -3,6 +3,7 @@ import TourCard from './components/TourCard';
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import SearchAppBar from './components/AppBar';
+import ComboBox from './components/ComboBox';
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
           <TourCard/>
           <TourCard/>
           <TourCard/>
-          <TourCard/>
         </Grid>
+        {/* <ComboBox/> */}
       </Container>
     </div>
   );
