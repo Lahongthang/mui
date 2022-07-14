@@ -6,24 +6,25 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 export default function BasicDatePicker() {
-  const [value, setValue] = React.useState(null);
+  const [dateDepart, setDateDepart] = React.useState(null)
+  const [dateReturn, setDateReturn] = React.useState(null)
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
         <Stack spacing={2}>
             <DatePicker
                 label="Depart"
-                value={value}
+                value={dateDepart}
                 onChange={(newValue) => {
-                setValue(newValue);
+                  setDateDepart(newValue);
                 }}
                 renderInput={(params) => <TextField {...params} />}
             />
             <DatePicker
                 label="Return"
-                value={value}
+                value={dateReturn}
                 onChange={(newValue) => {
-                setValue(newValue);
+                  setDateReturn(newValue);
                 }}
                 renderInput={(params) => <TextField {...params} />}
             />
