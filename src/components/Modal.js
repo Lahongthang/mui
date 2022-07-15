@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import StaticDateRangePickerDemo from './DatePicker';
-import { GlobalStyles } from '@mui/material';
 
 const style = {
   position: 'absolute',
@@ -16,6 +14,7 @@ const style = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  borderRadius: 2
 };
 
 export default function BasicModal() {
@@ -25,17 +24,15 @@ export default function BasicModal() {
 
   return (
     <Box>
-        <GlobalStyles />
         <Button onClick={handleOpen}>Book Now</Button>
         <Modal
-            sx={{borderRadius: '20px'}}
             open={open}
             onClose={handleClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
         >
             <Box sx={style}>
-            <StaticDateRangePickerDemo/>
+              <StaticDateRangePickerDemo/>
             </Box>
         </Modal>
     </Box>
